@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Binbin Huang</title>
+		<meta name="description" content="Simple academic homepage." />
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+			<header class="top">
+				<div class="wrap header-row">
+					<div class="header-text">
+						<h1>Binbin Huang</h1>
+						<p class="tag">PhD Student — The University of Hong Kong</p>
+					</div>
+					<!-- Place a file named `photo.jpg` in this folder to use your photo. -->
+					<!-- <img src="static/genfusion.jpg" alt="Your photo" class="photo"> -->
+				</div>
+                <div class="wrap header-text">
+				    <p> <a href="mailto:binbinhuang@connect.hku.hk">Email</a> · <a href="https://github.com/hbb1">Github:@hbb1</a> · <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ
+">Google Scholar</a> · <a href="static/my_resume.pdf">CV (PDF)</a> </p>
+                </div>
+			</header>
+
+		<main class="wrap main">
+			<section id="about">
+				<h2>About</h2>
+				<p>I work on 3D computer vision, building AI systems capable of interacting with real-world 3D environments using visual inputs, much like how humans do. This includes inferring shape, materials, cameras, lighting, motion, and functional properties from limited 2D observations.</p>
+
+                <p>I am currently a PhD student at <a href="https://www.cds.hku.hk/">HKU</a>, advised by <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a> and working closely with <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma</a>. From 2020 to 2024, I was a PhD student at <a href="https://www.shanghaitech.edu.cn/eng">ShanghaiTech University</a>. From Winter 2022 to Spring 2023, I interned at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">MSRA</a>, working with <a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ">Xin Tong</a> and <a href="https://jlyang.org/">Jiaolong Yang</a>. I did my undergraduate at <a href="https://www.scut.edu.cn/en/">SCUT</a> in 2020.</p>
+			</section>
+
+            <section id="publications">
+                <h2>Research</h2>
+                <p>See <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ">Google Scholar</a> for a complete list of publications.</p>
+                <p>* indicates equal contribution. </p>
+                <!-- Publications table: image/video left, meta right -->
+                <table class="pub-table" style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
+                    <tr onmouseenter="pub_start('cupid_overlay')" onmouseleave="pub_stop('cupid_overlay')">
+                        <td class="pub-left" style="padding:12px;vertical-align:middle">
+                            <div class="one">
+                                <div class="two" id="cupid_overlay">
+                                    <video width="100%" muted loop playsinline>
+                                        <source src="static/cupid.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <img src="static/cupid.jpg" width="100%" alt="cupid thumbnail">
+                            </div>
+                        </td>
+                        <td class="pub-right" style="padding:12px;vertical-align:middle">
+                            <a href="https://cupid3d.github.io/" class="paper-link">
+                                <div class="paper-title">CUPID: Pose-Grounded Generative 3D Reconstruction from a Single Image</div>
+                            </a>
+                            <div class="authors">
+                                <strong>Binbin Huang*</strong>,
+                                <a href="https://scholar.google.com/citations?user=LTzbpW8AAAAJ&hl=zh-CN">Haobin Duan*</a>,
+                                <a href="https://scholar.google.com/citations?user=1UD_eBQAAAAJ&hl=en">Yiqun Zhao</a>,
+                                <a href="https://maikouuu.github.io/">Zibo Zhao</a>,
+                                <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma</a>,
+                                <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a>
+                            </div>
+                            <div class="venue"><em>Preprint</em>, 2025</div>
+							<div class="links"><a href="https://cupid3d.github.io/">project page</a> / <a href="https://arxiv.org/abs/2510.20776">arXiv</a> / <a href="https://github.com/cupid3d/Cupid">Code</a> <a href="https://github.com/cupid3d/Cupid" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/cupid3d/Cupid?style=social" alt="GitHub stars" /></a> </div>
+                            <p class="paper-abstract"> Create canonically posed 3D object and an object-centric camera from single image in just a few seconds.</p>
+                        </td>
+                    </tr>
+
+                <table class="pub-table" style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
+                    <tr onmouseenter="pub_start('genfusion_overlay')" onmouseleave="pub_stop('genfusion_overlay')">
+                        <td class="pub-left" style="padding:12px;vertical-align:middle">
+                            <div class="one">
+                                <div class="two" id="genfusion_overlay">
+                                    <video width="100%" muted loop playsinline>
+                                        <source src="static/genfusion.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <img src="static/genfusion.jpg" width="100%" alt="genfusion thumbnail">
+                            </div>
+                        </td>
+                        <td class="pub-right" style="padding:12px;vertical-align:middle">
+                            <a href="https://genfusion.sibowu.com/" class="paper-link">
+                                <div class="paper-title">GenFusion: Closing the Loop between Reconstruction and Generation via Videos</div>
+                            </a>
+                            <div class="authors">
+                                <a href="https://sibowu.com/">Sibo Wu</a>,
+                                <a href="https://github.com/KevinXu02">Congrong Xu</a>,
+                                <strong>Binbin Huang</strong>,
+                                <a href="https://www.cvlibs.net/">Andreas Geiger</a>,
+                                <a href="https://apchenstu.github.io/">Anpei Chen</a>
+                            </div>
+                            <div class="venue"><em>CVPR</em>, 2025</div>
+							<div class="links"><a href="https://genfusion.sibowu.com/">project page</a> / <a href="https://arxiv.org/abs/2503.21219">arXiv</a> / <a href="https://github.com/hbb1/2d-gaussian-splatting">Code</a> <a href="https://github.com/hbb1/2d-gaussian-splatting" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/Inception3D/GenFusion?style=social" alt="GitHub stars" /></a> </div>
+                            <p class="paper-abstract"> Generative scene inpainting with a reconstruction-driven video generation model.</p>
+                        </td>
+                    </tr>
+
+
+                    <tr onmouseenter="pub_start('2dgs_overlay')" onmouseleave="pub_stop('2dgs_overlay')">
+                        <td class="pub-left" style="padding:12px;vertical-align:middle">
+                            <div class="one">
+                                <div class="two" id="2dgs_overlay">
+                                    <video width="100%" muted loop playsinline>
+                                        <source src="static/2dgs.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <img src="static/2dgs.jpg" width="100%" alt="2DGS thumbnail">
+                            </div>
+                        </td>
+                        <td class="pub-right" style="padding:12px;vertical-align:middle">
+                            <a href="https://surfsplatting.github.io/" class="paper-link">
+                                <div class="paper-title">2D Gaussian Splatting for Geometrically Accurate Radiance Fields</div>
+                            </a>
+                            <div class="authors">
+                                <strong>Binbin Huang</strong>,
+                                <a href="https://niujinshuchong.github.io/">Zehao Yu</a>,
+                                <a href="https://apchenstu.github.io/">Anpei Chen</a>,
+                                <a href="https://www.cvlibs.net/">Andreas Geiger</a>,
+                                <a href="https://scholar.google.com/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a>
+                            </div>
+                            <div class="venue"><em>SIGGRAPH</em>, 2024 <a href="https://resources.paperdigest.org/2024/09/most-influential-siggraph-papers-2024-09/" style="color:red;"><strong>(Most Influential Paper#1)</strong></a></div>
+							<div class="links"><a href="https://surfsplatting.github.io/">project page</a> / <a href="https://arxiv.org/abs/2403.17888">arXiv</a> / <a href="https://github.com/hbb1/2d-gaussian-splatting">Code</a> <a href="https://github.com/hbb1/2d-gaussian-splatting" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/hbb1/2d-gaussian-splatting?style=social" alt="GitHub stars" /></a> </div>
+                            <p class="paper-abstract">Using surfels and a ray-cast based differentiable rasterizer enables efficient and high-fidelity geometry and apperance reconstruction from real images.</p>
+                        </td>
+                    </tr>
+
+                    <tr onmouseenter="pub_start('mipsplat_overlay')" onmouseleave="pub_stop('mipsplat_overlay')">
+                        <td class="pub-left" style="padding:12px;vertical-align:middle">
+                            <div class="one">
+                                <div class="two" id="mipsplat_overlay">
+                                    <video width="100%" muted loop playsinline>
+                                        <source src="static/mipsplat.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <img src="static/mipsplat.png" width="100%" alt="MIP Splat thumbnail">
+                            </div>
+                        </td>
+                        <td class="pub-right" style="padding:12px;vertical-align:middle">
+                            <a href="https://niujinshuchong.github.io/mip-splatting/" class="paper-link">
+                                <div class="paper-title">Mip-Splatting: Alias-free 3D Gaussian Splatting</div>
+                            </a>
+                            <div class="authors">
+                                <a href="https://niujinshuchong.github.io/">Zehao Yu</a>,
+                                <a href="https://apchenstu.github.io/">Anpei Chen</a>,
+                                <strong>Binbin Huang</strong>,
+                                <a href="https://tsattler.github.io/">Torsten Sattler</a>,
+                                <a href="https://www.cvlibs.net/">Andreas Geiger</a>
+                            </div>
+                            <div class="venue"><em>CVPR</em>, 2024 <a href="https://cvpr.thecvf.com/Conferences/2024/News/Awards" style="color:red;"><strong>(Oral, Best Student Paper)</strong></a></div>
+							<div class="links"><a href="https://niujinshuchong.github.io/mip-splatting/">project page</a> / <a href="https://arxiv.org/abs/2311.16493">arXiv</a> / <a href="https://github.com/autonomousvision/mip-splatting">Code</a> <a href="https://github.com/autonomousvision/mip-splatting" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/autonomousvision/mip-splatting?style=social" alt="GitHub stars" /></a> </div>
+                            <p class="paper-abstract">Mip-filters enables synthesizing alias-free scenes with 3D Gaussian Splatting.</p>
+                        </td>
+                    </tr>
+
+                    <tr onmouseenter="pub_start('ivid_overlay')" onmouseleave="pub_stop('ivid_overlay')">
+                        <td class="pub-left" style="padding:12px;vertical-align:middle">
+                            <div class="one">
+                                <div class="two" id="ivid_overlay">
+                                    <video width="100%" muted loop playsinline>
+                                        <source src="static/ivid.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <img src="static/ivid.jpg" width="100%" alt="IVID thumbnail">
+                            </div>
+                        </td>
+                        <td class="pub-right" style="padding:12px;vertical-align:middle">
+                            <a href="https://jeffreyxiang.github.io/ivid/" class="paper-link">
+                                <div class="paper-title">3D-aware Image Generation using 2D Diffusion Models</div>
+                            </a>
+                            <div class="authors">
+                                <a href="https://jeffreyxiang.github.io/">Jianfeng Xiang</a>,
+                                <a href="https://jlyang.org/">Jiaolong Yang</a>,
+                                <strong>Binbin Huang</strong>,
+                                <a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ">Xin Tong</a>,
+                            </div>
+                            <div class="venue"><em>ICCV</em>, 2023</div> 
+							<div class="links"><a href="https://jeffreyxiang.github.io/ivid">project page</a> / <a href="https://arxiv.org/abs/2303.17905" target="_blank" rel="noopener">arXiv</a> / <a href="https://jeffreyxiang.github.io/ivid/">Code</a><img src="https://img.shields.io/github/stars/JeffreyXiang/ivid?style=social" alt="GitHub stars" /></a> </div>
+                            <p class="paper-abstract">Create 3D consistent scene from a single image via iterative multiview RGBD sampling and fusion.</p>
+                        </td>
+                    </tr>
+
+
+                </tbody></table>
+            </section>
+
+			<section id="Service">
+                <h2>Service</h2>
+                <p>Journal reviewer: TPAMI, TVCG ...</p>
+                <p>Conference reviewer: SIGGRAPH, SIGGRAPH Asia, CVPR, ICCV, ECCV, ICLR, NeurIPS ...</p>
+			</section>
+		</main>
+
+		<footer class="wrap footer">
+			<small>© Binbin Huang — Last updated: October 2025</small>
+		</footer>
+
+		<!-- small interactions (mobile nav toggle + publication hover overlays) -->
+		<script src="script.js"></script>
+	</body>
+</html>

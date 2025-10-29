@@ -1,0 +1,160 @@
+
+/* ==========================
+   Variables
+   ========================== */
+:root{
+  --bg: #ffffff;
+  --text: #111116;
+  --muted: #111116;
+  --accent: #0b63d4;
+  --max-width: 680px;
+}
+
+
+/* ==========================
+   Webfonts: Lato (subset)
+   - using a minimal set to reduce payload
+   ========================== */
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2'); }
+@font-face { font-family: 'Lato'; font-style: normal; font-weight: 700; src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2'); }
+@font-face { font-family: 'Lato'; font-style: italic; font-weight: 400; src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2'); }
+@font-face { font-family: 'Lato'; font-style: italic; font-weight: 700; src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2'); }
+
+
+/* ==========================
+   Base / Reset
+   ========================== */
+*{ box-sizing: border-box }
+html, body { height: 100% }
+body{
+  margin: 0;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; */
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px; /* base size from user's preference */
+}
+
+/* ==========================
+   Layout wrappers
+   ========================== */
+.wrap { max-width: var(--max-width); margin: 16px auto; padding: 0 16px }
+
+
+/* ==========================
+   Header
+   ========================== */
+.top { border-bottom: 1px solid #eee; padding-bottom: 18px }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px }
+.header-text { flex: 1; min-width: 0 }
+.top h1 { margin: 0; font-weight: 700; font-size: 32px } /* name */
+.tag { margin: 6px 0 0; color: var(--muted); font-size: 14px }
+.photo { width: 120px; height: 120px; border-radius: 6px; object-fit: cover; border: 1px solid #eee; transform: translateY(24px); margin-top: 6px;}
+
+
+/* ==========================
+   Typography
+   ========================== */
+.main h2 { margin-top: 18px; margin-bottom: 8px; font-size: 22px }
+section p { margin: 0 0 12px }
+ol { margin: 8px 0 12px; padding-left: 20px }
+.small { color: var(--muted); font-size: 12px }
+
+.paper-title { font-weight: 700; font-size: 13px; color: var(--text); margin-bottom: 4px }
+.authors { color: var(--muted); font-size: 13px; margin-bottom: 4px }
+.venue, .links { color: var(--muted); font-size: 14px; margin-bottom: 4px }
+.paper-abstract { margin-top: 8px }
+
+
+/* ==========================
+   Links & small interactions
+   ========================== */
+a { color: var(--accent); text-decoration: none }
+a:hover { text-decoration: none; color: #f09228 }
+
+/* Mobile nav toggle (if present) is handled by script.js; keep link behavior consistent */
+
+
+/* ==========================
+   Publications table / thumbnails
+   ========================== */
+.pub-table { margin-top: 12px }
+.pub-table td { vertical-align: top }
+.one { position: relative }
+.one img { display: block; border-radius: 6px }
+.two { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .18s ease-in-out }
+.two video { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block }
+
+/* Publication column sizing: semantic classes for left (thumbnail) and right (meta) */
+.pub-left {
+   width: 25%;
+   max-width: 180px; /* keeps thumbnail reasonably constrained on wide screens */
+   vertical-align: middle;
+   padding: 0; /* individual td keeps padding via inline style */
+}
+.pub-left .one { max-width: 180px }
+.pub-left .one img,
+.pub-left .one video { width: 100%; height: auto; display: block; border-radius: 6px }
+.pub-right { width: 75%; vertical-align: middle; padding-left: 12px }
+
+/* Responsive: stack columns on narrower viewports */
+@media (max-width: 720px) {
+   /* .pub-left, .pub-right { width: 100% !important; max-width: none; display: block } */
+   .pub-table td { display: block; width: 100% }
+   .pub-left .one { margin-bottom: 10px }
+}
+
+/* No-underline hover for titles/authors: subtle background highlight */
+.paper-link .paper-title,
+.authors a {
+  color: var(--accent);
+  text-decoration: none; /* ensure no underline */
+  transition: color .15s ease, background-color .15s ease, transform .15s ease;
+  display: inline-block;
+  padding: 0 1px; /* tiny padding so background highlight has room */
+  border-radius: 3px;
+}
+
+.paper-link:hover .paper-title,
+.authors a:hover {
+  color: #f09228;
+  background-color: rgba(240,146,40,0.08);
+  transform: translateY(-1px);
+}
+
+
+/* ==========================
+   Footer
+   ========================== */
+.footer { border-top: 1px solid #f0f0f0; padding-top: 12px; margin-top: 16px; text-align: center; color: var(--muted) }
+
+
+/* ==========================
+   Utilities
+   ========================== */
+.fade { transition: opacity .2s ease-in-out; -moz-transition: opacity .2s ease-in-out; -webkit-transition: opacity .2s ease-in-out; }
+span.highlight { background-color: #ffffd0 }
+.colored-box { color: black; padding: 20px; display: inline-block; border-radius: 10px }
+
+
+/* ==========================
+   Responsive
+   ========================== */
+@media (max-width: 520px) {
+  /* Hide video overlays on small screens to avoid autoplay surprises */
+  .two { display: none }
+  .pub-table td { display: block; width: 100% }
+  .pub-table td:first-child { margin-bottom: 10px }
+
+  .header-row { flex-direction: column; align-items: flex-start }
+  /* slightly smaller rectangular image on narrow screens */
+  .photo { width: 120px; height: 90px; margin-top: 12px; border-radius: 6px }
+}
+
+@media print {
+  .top, .footer { display: none }
+  .wrap { max-width: 100%; padding: 0 }
+}
+
