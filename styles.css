@@ -43,10 +43,8 @@ body{
 .wrap { max-width: var(--max-width); margin: 16px auto; padding: 0 16px }
 
 
-/* ==========================
-   Header
-   ========================== */
-.top { border-bottom: 1px solid #eee; padding-bottom: 18px }
+.top { padding-bottom: 0px }
+.top > .wrap:last-child { border-bottom: 1px solid #dedede; }
 .header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px }
 .header-text { flex: 1; min-width: 0 }
 .top h1 { margin: 0; font-weight: 700; font-size: 32px } /* name */
@@ -128,7 +126,7 @@ a:hover { text-decoration: none; color: #f09228 }
 /* ==========================
    Footer
    ========================== */
-.footer { border-top: 1px solid #f0f0f0; padding-top: 12px; margin-top: 16px; text-align: center; color: var(--muted) }
+.footer { border-top: 1px solid #dedede; padding-top: 12px; margin-top: 16px; text-align: center; color: var(--muted) }
 
 
 /* ==========================
