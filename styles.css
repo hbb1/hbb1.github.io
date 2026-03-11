@@ -8,7 +8,7 @@
    --muted: #555;
    --accent: #2b6cb0;
    --border: #e8e5e0;
-   --max-width: 740px;
+   --max-width: 780px;
    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
    --font-heading: 'Instrument Serif', Georgia, 'Times New Roman', serif;
 }
@@ -81,10 +81,12 @@ section p { margin: 0 0 14px; color: #333 }
 ol { margin: 8px 0 12px; padding-left: 20px }
 .small { color: var(--muted); font-size: 12px }
 
-.paper-title { font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.45 }
-.authors { color: var(--muted); font-size: 13px; margin-bottom: 4px; line-height: 1.5 }
-.venue, .links { color: var(--muted); font-size: 13px; margin-bottom: 4px }
-.paper-abstract { margin-top: 8px; color: var(--muted); font-size: 13px; font-style: italic }
+.paper-title { font-weight: 600; font-size: 15px; color: var(--text); margin-bottom: 5px; line-height: 1.4 }
+.authors { color: var(--muted); font-size: 13.5px; margin-bottom: 5px; line-height: 1.5 }
+.authors strong, .authors a { font-size: inherit }
+.venue { color: #444; font-size: 13.5px; margin-bottom: 4px; font-weight: 600; letter-spacing: 0.01em }
+.links { color: var(--muted); font-size: 13px; margin-bottom: 4px }
+.paper-abstract { margin-top: 6px; color: var(--muted); font-size: 13px; font-style: italic; line-height: 1.55 }
 
 
 /* ==========================
@@ -101,7 +103,8 @@ a:hover { text-decoration: none; color: #1a5294 }
    ========================== */
 .pub-table { margin-top: 16px; border-spacing: 0 }
 .pub-table tr { transition: background .15s ease }
-.pub-table tr:hover { background: rgba(26, 78, 207, 0.03) }
+/* Hover effect for publication rows */
+.pub-table tr:hover { background: rgba(26, 78, 207, 0.03) } 
 .pub-table td { vertical-align: top }
 .one { position: relative }
 .one img { display: block; border-radius: 8px }
