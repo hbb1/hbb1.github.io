@@ -4,7 +4,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<title>Binbin Huang</title>
-		<meta name="description" content="Simple academic homepage." />
+        <meta name="description" content="Simple academic homepage." />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
@@ -21,16 +24,13 @@
 				    <p> <a href="mailto:binbinhuang@connect.hku.hk">Email</a> · <a href="https://github.com/hbb1">Github:@hbb1</a> · <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ
 ">Google Scholar</a> · <a href="static/my_resume.pdf">CV (PDF)</a> </p>
                 </div>
+                <div class="wrap header-about">
+                    
+                    <p>I am a PhD student at <a href="https://www.cds.hku.hk/">HKU</a>, advised by <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a> and working closely with <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma</a>. From 2020 to 2024, I was a PhD student at <a href="https://www.shanghaitech.edu.cn/eng">ShanghaiTech University</a>. From Winter 2022 to Spring 2023, I interned at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">MSRA</a>, working with <a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ">Xin Tong</a> and <a href="https://jlyang.org/">Jiaolong Yang</a>. I did my undergraduate at <a href="https://www.scut.edu.cn/en/">SCUT</a> in 2020. I work on 3D computer vision, building AI systems capable of interacting with real-world 3D environments using visual inputs, much like how humans do.</p>
+                </div>
 			</header>
 
 		<main class="wrap main">
-			<section id="about">
-				<h2>About</h2>
-				<p>I work on 3D computer vision, building AI systems capable of interacting with real-world 3D environments using visual inputs, much like how humans do. This includes inferring shapes, materials, cameras, lighting, motion, and functional properties from limited 2D observations.</p>
-
-                <p>I am currently a PhD student at <a href="https://www.cds.hku.hk/">HKU</a>, advised by <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a> and working closely with <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma</a>. From 2020 to 2024, I was a PhD student at <a href="https://www.shanghaitech.edu.cn/eng">ShanghaiTech University</a>. From Winter 2022 to Spring 2023, I interned at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">MSRA</a>, working with <a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ">Xin Tong</a> and <a href="https://jlyang.org/">Jiaolong Yang</a>. I did my undergraduate at <a href="https://www.scut.edu.cn/en/">SCUT</a> in 2020.</p>
-			</section>
-
             <section id="publications">
                 <h2>Research</h2>
                 <p>See <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ">Google Scholar</a> for a complete list of publications.</p>
@@ -61,7 +61,7 @@
                                 <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma</a>,
                                 <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a>
                             </div>
-                            <div class="venue"><em>Preprint</em>, 2025</div>
+                            <div class="venue"><em>CVPR</em>, 2026</div>
 							<div class="links"><a href="https://cupid3d.github.io/">project page</a> / <a href="https://arxiv.org/abs/2510.20776">arXiv</a> / <a href="https://github.com/cupid3d/Cupid">Code</a> <a href="https://github.com/cupid3d/Cupid" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/cupid3d/Cupid?style=social" alt="GitHub stars" /></a> </div>
                             <p class="paper-abstract"> Create canonically posed 3D object and an object-centric camera from single image in just a few seconds.</p>
                         </td>
@@ -179,8 +179,30 @@
                                 <a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ">Xin Tong</a>,
                             </div>
                             <div class="venue"><em>ICCV</em>, 2023</div> 
-							<div class="links"><a href="https://jeffreyxiang.github.io/ivid">project page</a> / <a href="https://arxiv.org/abs/2303.17905" target="_blank" rel="noopener">arXiv</a> / <a href="https://jeffreyxiang.github.io/ivid/">Code</a><img src="https://img.shields.io/github/stars/JeffreyXiang/ivid?style=social" alt="GitHub stars" /></a> </div>
+							<div class="links"><a href="https://jeffreyxiang.github.io/ivid">project page</a> / <a href="https://arxiv.org/abs/2303.17905" target="_blank" rel="noopener">arXiv</a> / <a href="https://jeffreyxiang.github.io/ivid/">Code</a> <a href="https://jeffreyxiang.github.io/ivid/" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/JeffreyXiang/ivid?style=social" alt="GitHub stars" /></a> </div>
                             <p class="paper-abstract">Create 3D consistent scene from a single image via iterative multiview RGBD sampling and fusion.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="pub-left" style="padding:12px;vertical-align:middle">
+                            <div class="one">
+                                <img src="static/lbyl.png" width="100%" alt="Look Before You Leap thumbnail">
+                            </div>
+                        </td>
+                        <td class="pub-right" style="padding:12px;vertical-align:middle">
+                            <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Huang_Look_Before_You_Leap_Learning_Landmark_Features_for_One-Stage_Visual_CVPR_2021_paper.html" class="paper-link">
+                                <div class="paper-title">Look Before You Leap: Learning Landmark Features for One-Stage Visual Grounding</div>
+                            </a>
+                            <div class="authors">
+                                <strong>Binbin Huang</strong>,
+                                Dongze Lian,
+                                Weixin Luo,
+                                <a href="https://scholar.google.com/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a>
+                            </div>
+                            <div class="venue"><em>CVPR</em>, 2021</div>
+                            <div class="links"><a href="https://openaccess.thecvf.com/content/CVPR2021/html/Huang_Look_Before_You_Leap_Learning_Landmark_Features_for_One-Stage_Visual_CVPR_2021_paper.html">arXiv</a> / <a href="https://github.com/svip-lab/LBYLNet">Code</a> <a href="https://github.com/svip-lab/LBYLNet" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/svip-lab/LBYLNet?style=social" alt="GitHub stars" /></a> </div>
+                            <p class="paper-abstract">A contex-aware one-stage vision-lanuage model to localize textual queries within cluttered scenes more accurately.</p>
                         </td>
                     </tr>
 

@@ -3,74 +3,95 @@
    Variables
    ========================== */
 :root{
-  --bg: #ffffff;
-  --text: #111116;
-  --muted: #111116;
-  --accent: #0b63d4;
-  --max-width: 680px;
+   --bg: #fafaf7;
+   --text: #222;
+   --muted: #555;
+   --accent: #2b6cb0;
+   --border: #e8e5e0;
+   --max-width: 740px;
+   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+   --font-heading: 'Instrument Serif', Georgia, 'Times New Roman', serif;
 }
 
 
 /* ==========================
-   Webfonts: Lato (subset)
-   - using a minimal set to reduce payload
+   Typography system
+   - fonts loaded via Google Fonts (Inter + Instrument Serif)
    ========================== */
-@font-face { font-family: 'Lato'; font-style: normal; font-weight: 400; src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2'); }
-@font-face { font-family: 'Lato'; font-style: normal; font-weight: 700; src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2'); }
-@font-face { font-family: 'Lato'; font-style: italic; font-weight: 400; src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2'); }
-@font-face { font-family: 'Lato'; font-style: italic; font-weight: 700; src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2'); }
+h1, h2, h3, h4, h5, h6 {
+   font-family: var(--font-heading);
+   letter-spacing: -0.02em;
+   font-weight: 400;
+   color: var(--text);
+}
 
 
 /* ==========================
    Base / Reset
    ========================== */
-*{ box-sizing: border-box }
+*, *::before, *::after { box-sizing: border-box }
 html, body { height: 100% }
 body{
   margin: 0;
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  /* font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; */
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
-  font-size: 14px; /* base size from user's preference */
+  font-size: 15px;
+}
+
+table, td, th, tr,
+p,
+a,
+li,
+ol,
+ul {
+   font-family: var(--font-body);
+   font-size: 15px;
+   line-height: 1.75;
+   letter-spacing: -0.011em;
+   color: var(--text);
 }
 
 /* ==========================
    Layout wrappers
    ========================== */
-.wrap { max-width: var(--max-width); margin: 16px auto; padding: 0 16px }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px }
 
 
-.top { padding-bottom: 0px }
-.top > .wrap:last-child { border-bottom: 1px solid #dedede; }
+.top { padding: 56px 0 16px }
+.top > .wrap:last-child { border-bottom: none; padding-bottom: 0 }
 .header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px }
 .header-text { flex: 1; min-width: 0 }
-.top h1 { margin: 0; font-weight: 700; font-size: 32px } /* name */
-.tag { margin: 6px 0 0; color: var(--muted); font-size: 14px }
-.photo { width: 120px; height: 120px; border-radius: 6px; object-fit: cover; border: 1px solid #eee; transform: translateY(24px); margin-top: 6px;}
+.header-about { margin-top: 16px }
+.header-about p { color: #333 }
+.top h1 { margin: 0; font-weight: 400; font-size: 36px } /* name */
+.tag { margin: 8px 0 0; color: var(--muted); font-size: 15px; font-weight: 300 }
+.photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); margin-top: 6px; }
 
 
 /* ==========================
    Typography
    ========================== */
-.main h2 { margin-top: 18px; margin-bottom: 8px; font-size: 22px }
-section p { margin: 0 0 12px }
+.main { padding-top: 0; padding-bottom: 48px }
+.main h2 { margin-top: 36px; margin-bottom: 12px; font-size: 26px; padding-bottom: 8px; border-bottom: 1.5px solid var(--border) }
+.main section:first-child h2 { margin-top: 8px }
+section p { margin: 0 0 14px; color: #333 }
 ol { margin: 8px 0 12px; padding-left: 20px }
 .small { color: var(--muted); font-size: 12px }
 
-.paper-title { font-weight: 700; font-size: 13px; color: var(--text); margin-bottom: 4px }
-.authors { color: var(--muted); font-size: 13px; margin-bottom: 4px }
-.venue, .links { color: var(--muted); font-size: 14px; margin-bottom: 4px }
-.paper-abstract { margin-top: 8px }
+.paper-title { font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.45 }
+.authors { color: var(--muted); font-size: 13px; margin-bottom: 4px; line-height: 1.5 }
+.venue, .links { color: var(--muted); font-size: 13px; margin-bottom: 4px }
+.paper-abstract { margin-top: 8px; color: var(--muted); font-size: 13px; font-style: italic }
 
 
 /* ==========================
    Links & small interactions
    ========================== */
-a { color: var(--accent); text-decoration: none }
-a:hover { text-decoration: none; color: #f09228 }
+a { color: #2b6cb0; text-decoration: none; transition: color .15s ease }
+a:hover { text-decoration: none; color: #1a5294 }
 
 /* Mobile nav toggle (if present) is handled by script.js; keep link behavior consistent */
 
@@ -78,10 +99,12 @@ a:hover { text-decoration: none; color: #f09228 }
 /* ==========================
    Publications table / thumbnails
    ========================== */
-.pub-table { margin-top: 12px }
+.pub-table { margin-top: 16px; border-spacing: 0 }
+.pub-table tr { transition: background .15s ease }
+.pub-table tr:hover { background: rgba(26, 78, 207, 0.03) }
 .pub-table td { vertical-align: top }
 .one { position: relative }
-.one img { display: block; border-radius: 6px }
+.one img { display: block; border-radius: 8px }
 .two { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .18s ease-in-out }
 .two video { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block }
 
@@ -94,8 +117,8 @@ a:hover { text-decoration: none; color: #f09228 }
 }
 .pub-left .one { max-width: 180px }
 .pub-left .one img,
-.pub-left .one video { width: 100%; height: auto; display: block; border-radius: 6px }
-.pub-right { width: 75%; vertical-align: middle; padding-left: 12px }
+.pub-left .one video { width: 100%; height: auto; display: block; border-radius: 8px }
+.pub-right { width: 75%; vertical-align: middle; padding-left: 16px }
 
 /* Responsive: stack columns on narrower viewports */
 @media (max-width: 720px) {
@@ -117,16 +140,16 @@ a:hover { text-decoration: none; color: #f09228 }
 
 .paper-link:hover .paper-title,
 .authors a:hover {
-  color: #f09228;
-  background-color: rgba(240,146,40,0.08);
-  transform: translateY(-1px);
+  color: #0d3299;
+  background-color: rgba(26,78,207,0.06);
+  transform: translateY(-0.5px);
 }
 
 
 /* ==========================
    Footer
    ========================== */
-.footer { border-top: 1px solid #dedede; padding-top: 12px; margin-top: 16px; text-align: center; color: var(--muted) }
+.footer { border-top: 1px solid var(--border); padding: 24px 0 40px; margin-top: 0; text-align: center; color: var(--muted); font-size: 13px }
 
 
 /* ==========================
