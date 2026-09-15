@@ -18,6 +18,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // initialize overlays hidden
   document.querySelectorAll('.two').forEach(el=>el.style.opacity='0');
+
+  // Keep older publications available without letting them dominate the page.
+  const olderWorkToggle = document.querySelector('.older-work-toggle');
+  const olderPublications = document.querySelectorAll('.older-publication');
+  if(olderWorkToggle && olderPublications.length){
+    olderWorkToggle.addEventListener('click', function(){
+      const expanded = olderWorkToggle.getAttribute('aria-expanded') === 'true';
+      olderWorkToggle.setAttribute('aria-expanded', String(!expanded));
+      olderPublications.forEach(row => row.hidden = expanded);
+      olderWorkToggle.querySelector('span:first-child').textContent = expanded
+        ? `Show earlier work (${olderPublications.length})`
+        : 'Hide earlier work';
+    });
+  }
 });
 
 // Publication hover controls: show/hide a video overlay by element id

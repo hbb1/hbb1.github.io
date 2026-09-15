@@ -4,10 +4,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<title>Binbin Huang</title>
-        <meta name="description" content="Simple academic homepage." />
+        <meta name="description" content="Academic homepage of Binbin Huang, a researcher in computer vision and 3D representation." />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap">
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
@@ -15,18 +15,15 @@
 				<div class="wrap header-row">
 					<div class="header-text">
 						<h1>Binbin Huang</h1>
-						<p class="tag">PhD Student — The University of Hong Kong</p>
+						<p class="tag">PhD Student at The University of Hong Kong</p>
 					</div>
-					<!-- Place a file named `photo.jpg` in this folder to use your photo. -->
-					<!-- <img src="static/genfusion.jpg" alt="Your photo" class="photo"> -->
-				</div>
-                <div class="wrap header-text">
-				    <p> <a href="mailto:binbinhuang@connect.hku.hk">Email</a> · <a href="https://github.com/hbb1">Github:@hbb1</a> · <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ
-">Google Scholar</a> · <a href="static/my_resume.pdf">CV (PDF)</a> </p>
                 </div>
+                <nav class="wrap header-links" aria-label="Profile links">
+				    <p><a href="mailto:binbinhuang@connect.hku.hk">Email</a> · <a href="https://github.com/hbb1">GitHub: @hbb1</a> · <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ">Google Scholar</a> · <a href="static/my_resume.pdf">CV (PDF)</a></p>
+                </nav>
              <div class="wrap header-about">
                 <p>
-                    I am creating space from images. I am advised by <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a> and collaborating with <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma</a>. My research journey includes time at <a href="https://www.shanghaitech.edu.cn/eng">ShanghaiTech</a> (PhD, 2020–2024), a research internship at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">MSRA</a> (with <a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ">Xin Tong</a>, <a href="https://jlyang.org/">Jiaolong Yang</a>), and a B.Eng. from <a href="https://www.scut.edu.cn/en/">SCUT</a> (2020).
+                    I am interested in visual models that perceive, represent, and understand the physical world. My work focuses on object-centric perception, 3D reconstruction, and generative modeling. I am advised by <a href="https://scholar.google.com.sg/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a> and collaborate with <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma</a>. I have had the pleasure of spending time at <a href="https://www.shanghaitech.edu.cn/eng">ShanghaiTech</a>, <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/">MSRA</a> (with <a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ">Xin Tong</a> and <a href="https://jlyang.org/">Jiaolong Yang</a>), and <a href="https://www.scut.edu.cn/en/">SCUT</a>.
                 </p>
             </div>
 			</header>
@@ -34,8 +31,7 @@
 		<main class="wrap main">
             <section id="publications">
                 <h2>Research</h2>
-                <p>See <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ">Google Scholar</a> for a complete list of publications.</p>
-                <p>* indicates equal contribution. </p>
+                <p>See <a href="https://scholar.google.com/citations?user=5da8iKwAAAAJ">Google Scholar</a> for a complete list of publications. · * indicates equal contribution.</p>
                 <!-- Publications table: image/video left, meta right -->
                 <table class="pub-table" style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
                     <tr onmouseenter="pub_start('cupid_overlay')" onmouseleave="pub_stop('cupid_overlay')">
@@ -67,8 +63,6 @@
                             <p class="paper-abstract"> Create canonically posed 3D object and an object-centric camera from single image in just a few seconds.</p>
                         </td>
                     </tr>
-
-                <table class="pub-table" style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;"><tbody>
                     <tr onmouseenter="pub_start('genfusion_overlay')" onmouseleave="pub_stop('genfusion_overlay')">
                         <td class="pub-left" style="padding:12px;vertical-align:middle">
                             <div class="one">
@@ -185,7 +179,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr class="older-publication" hidden>
                         <td class="pub-left" style="padding:12px;vertical-align:middle">
                             <div class="one square-figure">
                                 <img src="static/omni-los.png" width="100%" alt="Omni-LoS thumbnail">
@@ -214,7 +208,7 @@
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr class="older-publication" hidden>
                         <td class="pub-left" style="padding:12px;vertical-align:middle">
                             <div class="one">
                                 <img src="static/lbyl.png" width="100%" alt="Look Before You Leap thumbnail">
@@ -227,7 +221,7 @@
                             <div class="authors">
                                 <strong>Binbin Huang</strong>,
                                 <a href="https://dongzelian.com/">Dongze Lian</a>,
-                                <a href="https://zachluo.github.io/"></a>Weixin Luo</a>,
+                                <a href="https://zachluo.github.io/">Weixin Luo</a>,
                                 <a href="https://scholar.google.com/citations?user=fe-1v0MAAAAJ">Shenghua Gao</a>
                             </div>
                             <div class="venue"><em>CVPR</em>, 2021</div>
@@ -238,6 +232,9 @@
 
 
                 </tbody></table>
+                <button class="older-work-toggle" type="button" aria-expanded="false">
+                    <span>Show earlier work (2)</span><span aria-hidden="true">＋</span>
+                </button>
             </section>
 
 			<section id="Service">
@@ -248,7 +245,7 @@
 		</main>
 
 		<footer class="wrap footer">
-			<small>© Binbin Huang — Last updated: October 2025</small>
+			<small>© Binbin Huang — Last updated: September 2026</small>
 		</footer>
 
 		<!-- small interactions (mobile nav toggle + publication hover overlays) -->
